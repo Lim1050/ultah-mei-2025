@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday, Sayang!</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/main.css" />
+  </head>
+  <body>
+    <div class="section" id="intro">
+      <h1>Selamat Ulang Tahun, Cintaku! 🎉</h1>
+      <p>Klik tombol di bawah untuk melihat hadiah spesial dariku.</p>
+      <button
+        class="btn"
+        onclick="document.getElementById('content').scrollIntoView({behavior: 'smooth'})"
+      >
+        Lihat Hadiah 🎁
+      </button>
+    </div>
+
+    <div class="section" id="content">
+      <h2>✨ Kenangan Indah Kita ✨</h2>
+      <div class="gallery">
+        <img src="./assets/images/foto1.jpg" alt="Foto 1" />
+        <img src="./assets/images/foto2.jpg" alt="Foto 2" />
+        <img src="./assets/images/foto3.jpg" alt="Foto 3" />
+        <!-- Tambahkan lebih banyak foto di sini -->
+      </div>
+
+      <div class="letter">
+        <h2>📜 Surat Cinta Untukmu</h2>
+        <p>
+          Sayangku, <br /><br />
+          Hari ini adalah hari istimewa karena kamu dilahirkan ke dunia, dan aku
+          bersyukur karena dunia juga mempertemukanku denganmu. Terima kasih
+          telah menjadi cahaya dalam hidupku selama ini. Aku selalu bangga dan
+          bahagia bersamamu.
+          <br /><br />
+          Semoga hari-harimu dipenuhi cinta, tawa, dan harapan yang indah. Aku
+          sayang kamu, selalu 💖
+          <br /><br />
+          - Dari yang selalu mencintaimu
+        </p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>🎵 Lagu Kita</h2>
+      <audio controls>
+        <source src="lagu-kita.mp3" type="audio/mpeg" />
+        Browser kamu tidak mendukung audio.
+      </audio>
+    </div>
+
+    <div class="section">
+      <p>💌 Terima kasih sudah melihat hadiah ini. Semoga kamu suka!</p>
+      <button
+        class="btn"
+        onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+      >
+        Kembali ke Atas ⬆️
+      </button>
+    </div>
+    <script src="script/main.js"></script>
+  </body>
+</html>
