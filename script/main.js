@@ -21,3 +21,27 @@ window.addEventListener("scroll", () => {
     intro.style.opacity = 1;
   }
 });
+
+const container = document.querySelector(".falling-container");
+const emojis = ["🎈", "💖", "🎉", "💕", "💘", "💝"];
+const audio = document.getElementById("loveSong");
+
+function createFallingEmoji() {
+  const emoji = document.createElement("div");
+  emoji.classList.add("falling");
+  emoji.style.left = Math.random() * 100 + "vw";
+  emoji.style.animationDuration = 3 + Math.random() * 2 + "s";
+  emoji.style.fontSize = 20 + Math.random() * 20 + "px";
+  emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+  container.appendChild(emoji);
+  setTimeout(() => emoji.remove(), 5000);
+}
+
+setInterval(createFallingEmoji, 300);
+
+// 🔊 Mulai lagu saat tombol "Lihat Hadiah" ditekan
+document.querySelector(".btn").addEventListener("click", () => {
+  audio.play().catch((err) => {
+    console.log("Autoplay diblokir:", err);
+  });
+});

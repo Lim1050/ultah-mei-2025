@@ -22,7 +22,7 @@
       </button>
     </div>
 
-    <div class="section" id="content">
+    <div class="section">
       <h2>✨ Kenangan Indah Kita ✨</h2>
       <div class="gallery">
         <img src="./assets/images/foto1.jpg" alt="Foto 1" />
@@ -31,7 +31,7 @@
         <!-- Tambahkan lebih banyak foto di sini -->
       </div>
 
-      <div class="letter">
+      <div class="letter" id="content">
         <h2>📜 Surat Cinta Untukmu</h2>
         <p>
           Sayangku, <br /><br />
@@ -48,13 +48,13 @@
       </div>
     </div>
 
-    <div class="section">
-      <h2>🎵 Lagu Kita</h2>
-      <audio controls>
-        <source src="lagu-kita.mp3" type="audio/mpeg" />
-        Browser kamu tidak mendukung audio.
-      </audio>
-    </div>
+    <!-- <div class="section"> -->
+    <!-- <h2>🎵 Lagu Kita</h2> -->
+    <audio id="loveSong" loop>
+      <source src="./assets/music/perfect.m4a" type="audio/mpeg" />
+      Browser kamu tidak mendukung audio.
+    </audio>
+    <!-- </div> -->
 
     <div class="section">
       <p>💌 Terima kasih sudah melihat hadiah ini. Semoga kamu suka!</p>
@@ -65,6 +65,10 @@
         Kembali ke Atas ⬆️
       </button>
     </div>
+
+    <!-- Animasi emoji jatuh -->
+    <div class="falling-container"></div>
+
     <script src="script/main.js"></script>
   </body>
 </html>
