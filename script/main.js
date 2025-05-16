@@ -73,9 +73,29 @@ function typeLines(
   typeLine();
 }
 
+const audio = document.getElementById("loveSong");
+const toggleBtn = document.getElementById("audioToggle");
+const icon = document.getElementById("audioIcon");
+
+let isPlaying = false;
+
+toggleBtn.addEventListener("click", () => {
+  if (isPlaying) {
+    audio.pause();
+    icon.src = "./assets/images/pause.png";
+  } else {
+    audio.play();
+    icon.src = "./assets/images/play.png";
+  }
+  isPlaying = !isPlaying;
+});
+
 function playMusicAndScroll() {
   const audio = document.getElementById("loveSong");
+  const icon = document.getElementById("audioIcon");
   audio.play();
+  isPlaying = true;
+  icon.src = "./assets/images/play.png";
 
   const fotoIds = [
     "foto1",
@@ -156,7 +176,7 @@ function playMusicAndScroll() {
               document
                 .getElementById("penutup")
                 .scrollIntoView({ behavior: "smooth" });
-            }, 3000); // beri jeda 1 detik agar tidak terlalu tiba-tiba
+            }, 3000); // beri jeda 3 detik agar tidak terlalu tiba-tiba
           });
         }, 2000); // delay sebelum scroll ke surat cinta
       }

@@ -50,7 +50,7 @@
   </head>
   <body class="bg-pink-50 text-gray-800 overflow-hidden">
     <div
-      class="min-h-screen flex flex-col items-center justify-center text-center py-20 px-4"
+      class="min-h-screen flex flex-col items-center justify-center text-center px-4"
       id="intro"
     >
       <h1 class="text-4xl md:text-5xl font-bold mb-4">
@@ -65,9 +65,15 @@
       >
         Lihat Hadiah 🎁
       </button>
+      <img
+        src="./assets/images/ayimei1.png"
+        alt="Ayimei"
+        class="max-w-xs rounded-lg shadow-md mt-4"
+        id="ayimei"
+      />
     </div>
 
-    <div class="py-15 px-4 text-center" id="kenangan">
+    <div class="px-4 text-center" id="kenangan">
       <h2 class="text-2xl font-semibold mb-8">✨ Kenangan Indah Kita ✨</h2>
       <div class="flex flex-wrap justify-center gap-4">
         <img
@@ -115,7 +121,7 @@
       </div>
     </div>
 
-    <div class="min-h-screen py-15 px-4 text-center" id="hadiah">
+    <div class="min-h-screen px-4 text-center" id="hadiah">
       <div
         id="suratBox"
         class="bg-pink-100 p-6 mt-8 max-w-2xl mx-auto rounded-lg shadow fade-in"
@@ -136,7 +142,15 @@
 
     <div class="mt-10 py-4 px-4 text-center">
       <h2 class="text-3xl font-semibold mb-4">🎵 Lagu Kita</h2>
-      <audio id="loveSong" controls loop class="mx-auto">
+      <button id="audioToggle" class="mx-auto">
+        <img
+          id="audioIcon"
+          src="./assets/images/pause.png"
+          alt="Play Music"
+          class="mx-auto hover:scale-110 transition-transform"
+        />
+      </button>
+      <audio id="loveSong" loop class="mx-auto">
         <source src="./assets/music/perfect.m4a" type="audio/mpeg" />
         Browser kamu tidak mendukung audio.
       </audio>
