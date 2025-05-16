@@ -136,8 +136,23 @@ function playMusicAndScroll() {
 
           // Ketik isi surat per baris, lalu setelah selesai baru scroll ke penutup
           typeLines("suratText", isiSurat, 100, 800, () => {
-            // callback onDone setelah selesai mengetik
+            // 1. Tampilkan foto8
+            const foto8 = document.getElementById("foto8");
+            foto8.classList.remove("hidden");
+
+            // 2. Opsional: tambahkan efek fade-in ke foto8 (jika kamu mau)
+            foto8.classList.add(
+              "opacity-0",
+              "transition-opacity",
+              "duration-1000"
+            );
+            setTimeout(() => foto8.classList.remove("opacity-0"), 50);
+
+            // 3. Scroll ke penutup setelah 3 detik
             setTimeout(() => {
+              document
+                .getElementById("hadiah")
+                .classList.remove("min-h-screen");
               document
                 .getElementById("penutup")
                 .scrollIntoView({ behavior: "smooth" });
